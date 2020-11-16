@@ -99,5 +99,33 @@ public class Board {
 		if(player < WHITE || player > BLACK) {
 			throw new RuntimeException();
 		}
+		
+	Tuple<Integer,Integer> origin = play.getOrigin();
+		
+		board[origin.y][origin.x] = player;
+		
+		play.getEnds().forEach( (end) -> {
+			Tuple<Integer,Integer> dir = new Tuple<Integer, Integer>(0, 0);
+			if (end.x > origin.x) {
+				dir.x = 1;
+			}else if (end.x < origin.x) {
+				dir.x = -1;
+			}			
+			if (end.y > origin.y) {
+				dir.y = 1;
+			}else if (end.y < origin.y) {
+				dir.y = -1;
+			}
+			
+			Tuple<Integer,Integer> position = new Tuple<Integer, Integer>(origin.x + dir.x, origin.y + dir.y );
+			
+			while (position.x != end.x || position.y != end.y) {
+				board[position.y][position.x] = player;
+				position.x += dir.x;
+				position.y += dir.y;
+			}
+			
+		});
+		
 	}
 }
