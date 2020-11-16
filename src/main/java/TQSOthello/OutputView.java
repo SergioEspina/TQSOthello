@@ -12,7 +12,7 @@ public class OutputView {
 	private final String JUNCTION = "+";	
 	private final String H_OFFSET = "  ";
 	
-	private final int MAX_CHARACTERS = 30;
+	private final int MAX_CHARACTERS = 20;
 	
 	public void printBoard(Board board, ArrayList<Play> plays) {
 		

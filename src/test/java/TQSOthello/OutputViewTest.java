@@ -35,6 +35,8 @@ public class OutputViewTest {
 		testOut.printSeparator(19);
 		//n veces
 		testOut.printSeparator(20);
+		//n+1 veces
+		testOut.printSeparator(21);
 	}
 
 }
