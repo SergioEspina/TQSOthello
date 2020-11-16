@@ -142,5 +142,14 @@ public class BoardTest {
 		testBoard.executePlay(null, 5);	
 	}
 	
+	//Decision coverage
+	@Test 
+	public void testCalculatePlayDecision() {
+		MockBoard testBoard2 = new MockBoard();
+		testBoard2.calculatePlays(2);
+		testBoard2.initBoard();
+		testBoard2.calculatePlays(2);
+		
+	}
 	
 }
