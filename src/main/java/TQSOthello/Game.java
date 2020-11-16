@@ -50,13 +50,17 @@ public class Game {
 				Tuple<Integer, Integer> position;
 				do {
 					position = input.askPosition();
-				}while(!isPositionInPlays(position));
+				}while(!isPositionInPlays(plays,position));
 				board.executePlay(getPlayByPosition(), activePlayer);
 				skippedLastTurn = false;
 			}
 			
 			
 		}while(!endGame);
+	}
+	
+	public boolean isPositionInPlays(ArrayList<Play> plays, Tuple<Integer,Integer> position) {
+		return false;
 	}
 	
 }

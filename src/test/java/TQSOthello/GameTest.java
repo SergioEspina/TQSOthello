@@ -2,6 +2,8 @@ package TQSOthello;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 public class GameTest {
@@ -28,6 +30,19 @@ public class GameTest {
 	
 	@Test
 	public void  testPlayGame() {
+		
+	}
+	
+	@Test
+	public void testIsPositionInPlays() {
+		testGame = new Game();
+		ArrayList<Play> plays = new ArrayList<Play>();
+		Tuple<Integer,Integer> position = new Tuple<Integer,Integer>(0,0);
+		assertFalse(testGame.isPositionInPlays(plays, position));
+		
+		Play play = new Play(new Tuple<Integer, Integer>(0,0));
+		plays.add(play);
+		assertTrue(testGame.isPositionInPlays(plays, position));
 		
 	}
 
