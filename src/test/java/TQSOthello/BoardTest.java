@@ -62,5 +62,37 @@ public class BoardTest {
 		exception.expect(RuntimeException.class);
 		testBoard.calculateEndPlay(null, null, 0, 5);
 	}
+	
+	
+	//Player: Particiones equivalentes: -inf a 0, 1 a 2, 3 a +inf
+	//		  Valores frontera: 0,1,2,3
+	@Test
+	public void testCalculatePlaysPlayerMinus5() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		exception.expect(RuntimeException.class);
+		testBoard.calculatePlays(-5);	
+	}
+	@Test
+	public void testCalculatePlaysPlayer0() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		exception.expect(RuntimeException.class);
+		testBoard.calculatePlays(0);	
+	}
+	@Test
+	public void testCalculatePlaysPlayer3() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		exception.expect(RuntimeException.class);
+		testBoard.calculatePlays(3);	
+	}
+	@Test
+	public void testCalculatePlaysPlayer5() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		exception.expect(RuntimeException.class);
+		testBoard.calculatePlays(5);	
+	}
 
 }

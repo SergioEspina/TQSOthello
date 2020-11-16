@@ -1,5 +1,7 @@
 package TQSOthello;
 
+import java.util.ArrayList;
+
 public class Board {
 	
 	private final int HEIGHT = 8;
@@ -59,5 +61,15 @@ public class Board {
 		}
 		
 		return end;
+	}
+	
+	public ArrayList<Play> calculatePlays(int player){
+		
+		ArrayList<Play> plays = new ArrayList<Play>();
+		if(player < WHITE || player > BLACK) {
+			throw new RuntimeException();
+		}
+		
+		return plays;
 	}
 }
