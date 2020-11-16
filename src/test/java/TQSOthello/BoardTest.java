@@ -2,6 +2,8 @@ package TQSOthello;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -150,6 +152,30 @@ public class BoardTest {
 		testBoard2.initBoard();
 		testBoard2.calculatePlays(2);
 		
+	}
+	
+	//Decision coverage
+	@Test
+	public void testExecutePlay() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		ArrayList<Play> plays = testBoard.calculatePlays(2);
+		testBoard.executePlay(plays.get(0), 2);
+		
+		testBoard = new Board();
+		testBoard.initBoard();
+		plays = testBoard.calculatePlays(2);
+		testBoard.executePlay(plays.get(1), 2);
+		
+		testBoard = new Board();
+		testBoard.initBoard();
+		plays = testBoard.calculatePlays(2);
+		testBoard.executePlay(plays.get(2), 2);
+		
+		testBoard = new Board();
+		testBoard.initBoard();
+		plays = testBoard.calculatePlays(2);
+		testBoard.executePlay(plays.get(3), 2);
 	}
 	
 }
