@@ -21,4 +21,10 @@ public class Play {
 		return origin;
 	}
 	
+	public ArrayList<Tuple<Integer, Integer>> getEnds() { return ends; }
+	
+	public void addEnd(Tuple<Integer, Integer> end) {
+		
+	}
+	
 }

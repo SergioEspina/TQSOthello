@@ -30,7 +30,23 @@ public class PlayTest {
 		assertEquals(8, play.getOrigin().getX());
 		play = new Play(new Tuple<Integer, Integer>(20, 5));
 		assertEquals(8, play.getOrigin().getX());
-		
+		//Y < 0
+		play = new Play(new Tuple<Integer, Integer>(5,-20));
+		assertEquals(0, play.getOrigin().getY());
+		play = new Play(new Tuple<Integer, Integer>(5,-1));
+		assertEquals(0, play.getOrigin().getY());
+		//0 >= Y <= 8
+		play = new Play(new Tuple<Integer, Integer>(5,0));
+		assertEquals(0, play.getOrigin().getY());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		assertEquals(5, play.getOrigin().getY());
+		play = new Play(new Tuple<Integer, Integer>(5,8));
+		assertEquals(8, play.getOrigin().getY());
+		//Y > 8
+		play = new Play(new Tuple<Integer, Integer>(5,9));
+		assertEquals(8, play.getOrigin().getY());
+		play = new Play(new Tuple<Integer, Integer>(5,20));
+		assertEquals(8, play.getOrigin().getY());
 		
 	}
 
