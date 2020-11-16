@@ -29,7 +29,12 @@ public class Play {
 	public ArrayList<Tuple<Integer, Integer>> getEnds() { return ends; }
 	
 	public void addEnd(Tuple<Integer, Integer> end) {
-		
+		if(end.x < 0) {
+			end.x = 0;
+		}else if(end.x > 8) {
+			end.x = 8;
+		}
+		ends.add(end);
 	}
 	
 }
