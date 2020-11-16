@@ -19,7 +19,7 @@ private Scanner s;
 			if(s.hasNextInt()) {
 				input = s.nextInt();
 				if (input >= 0 && input <= 8) {
-					position.x = input -1 ;
+					position.y = input -1 ;
 					break;
 				}else {
 					System.out.println("The value must be between 1 and 8");
@@ -35,7 +35,7 @@ private Scanner s;
 			if(s.hasNextInt()) {
 				input = s.nextInt();
 				if (input >= 0 && input <= 8) {
-					position.y = input -1 ;
+					position.x = input -1 ;
 					break;
 				}else {
 					System.out.println("The value must be between 1 and 8");

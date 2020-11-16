@@ -67,7 +67,7 @@ public class Game {
 				return true;
 			}
 		}
-		
+		System.out.println("Incorrect play");
 		return false;
 	}
 	
