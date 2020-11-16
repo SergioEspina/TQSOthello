@@ -20,4 +20,9 @@ public class Game {
 	public boolean isTwoPlayers() {
 		return twoPlayers;
 	}
+	
+	public int switchPlayer(int player) {
+		return -1;
+	}
+	
 }
