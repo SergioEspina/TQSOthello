@@ -55,6 +55,7 @@ public class Game {
 				skippedLastTurn = false;
 			}
 			
+			activePlayer = switchPlayer(activePlayer);
 			
 		}while(!endGame);
 	}
