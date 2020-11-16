@@ -34,6 +34,12 @@ public class Play {
 		}else if(end.x > 8) {
 			end.x = 8;
 		}
+		
+		if(end.y < 0) {
+			end.y = 0;
+		}else if(end.y > 8) {
+			end.y = 8;
+		}
 		ends.add(end);
 	}
 	
