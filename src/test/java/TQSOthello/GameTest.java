@@ -25,5 +25,10 @@ public class GameTest {
 		assertEquals(-1, testGame.switchPlayer(3));
 		assertEquals(-1, testGame.switchPlayer(5));
 	}
+	
+	@Test
+	public void  testPlayGame() {
+		
+	}
 
 }

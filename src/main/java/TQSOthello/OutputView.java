@@ -91,4 +91,12 @@ public class OutputView {
 		}
 		
 	}
+	
+	public void printTurnSkipped(int player) {
+		if(player == 1) {
+			System.out.println("White turn skipped");
+		}else {
+			System.out.println("Black turn skipped");
+		}
+	}
 }
