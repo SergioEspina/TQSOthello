@@ -81,6 +81,31 @@ public class PlayTest {
 		play.addEnd(new Tuple<Integer, Integer>(20,5));
 		assertEquals(8, play.getEnds().get(0).getX());
 		
+		//y < 0
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,-20));
+		assertEquals(0, play.getEnds().get(0).getY());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,-1));
+		assertEquals(0, play.getEnds().get(0).getY());
+		//0 >= y <= 8
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,0));
+		assertEquals(0, play.getEnds().get(0).getY());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,5));
+		assertEquals(5, play.getEnds().get(0).getY());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,8));
+		assertEquals(8, play.getEnds().get(0).getY());
+		//y > 8
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,9));
+		assertEquals(8, play.getEnds().get(0).getY());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,20));
+		assertEquals(8, play.getEnds().get(0).getY());
+		
 		
 	}
 
