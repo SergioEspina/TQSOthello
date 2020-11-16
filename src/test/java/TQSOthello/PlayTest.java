@@ -49,5 +49,39 @@ public class PlayTest {
 		assertEquals(8, play.getOrigin().getY());
 		
 	}
+	
+	
+	//Input end
+	//Particiones equivalentes: -inf a -1, 0 a 8, 9 a +inf
+	//Valores frontera: -1,0,8,9
+	@Test
+	public void testAddEnd() {
+		//x < 0
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(-20,5));
+		assertEquals(0, play.getEnds().get(0).getX());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(-1,5));
+		assertEquals(0, play.getEnds().get(0).getX());
+		//0 >= x <= 8
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(0,5));
+		assertEquals(0, play.getEnds().get(0).getX());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(5,5));
+		assertEquals(5, play.getEnds().get(0).getX());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(8,5));
+		assertEquals(8, play.getEnds().get(0).getX());
+		//X > 8
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(9,5));
+		assertEquals(8, play.getEnds().get(0).getX());
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		play.addEnd(new Tuple<Integer, Integer>(20,5));
+		assertEquals(8, play.getEnds().get(0).getX());
+		
+		
+	}
 
 }
