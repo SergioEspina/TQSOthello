@@ -96,6 +96,8 @@ public class Board {
 	}
 	
 	public void executePlay(Play play, int player) {
-		
+		if(player < WHITE || player > BLACK) {
+			throw new RuntimeException();
+		}
 	}
 }
