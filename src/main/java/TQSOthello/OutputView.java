@@ -41,9 +41,7 @@ public class OutputView {
 			}
 			middleBar = middleBar + V_BAR;
 		}
-		
-		System.out.println(plays.size());
-		
+				
 		System.out.println(colBar);
 		System.out.println(topBar);
 		
@@ -94,9 +92,18 @@ public class OutputView {
 	
 	public void printTurnSkipped(int player) {
 		if(player == 1) {
-			System.out.println("White turn skipped");
+			System.out.println( WHITE_CHARACTER + "'s turn skipped");
 		}else {
-			System.out.println("Black turn skipped");
+			System.out.println( BLACK_CHARACTER + "'s turn skipped");
 		}
+	}
+
+	public void printPlayerTurn(int player) {
+		if(player == 1) {
+			System.out.print( WHITE_CHARACTER + "'s turn");
+		}else {
+			System.out.print( BLACK_CHARACTER + "'s turn");
+		}
+		System.out.println(" (" + POSSIBLE_PLAY + " indicates a possible play)");
 	}
 }

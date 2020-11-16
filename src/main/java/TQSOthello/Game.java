@@ -37,6 +37,7 @@ public class Game {
 		ArrayList<Play> plays;
 		
 		do {
+			output.printPlayerTurn(activePlayer);
 			plays = board.calculatePlays(activePlayer);
 			if(plays.size() == 0) {
 				output.printTurnSkipped(activePlayer);
