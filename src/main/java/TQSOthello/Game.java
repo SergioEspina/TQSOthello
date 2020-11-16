@@ -51,7 +51,7 @@ public class Game {
 				do {
 					position = input.askPosition();
 				}while(!isPositionInPlays(plays,position));
-				//board.executePlay(getPlayByPosition(), activePlayer);
+				board.executePlay(getPlayByPosition(plays,position), activePlayer);
 				skippedLastTurn = false;
 			}
 			
@@ -68,6 +68,10 @@ public class Game {
 		}
 		
 		return false;
+	}
+	
+	public Play getPlayByPosition(ArrayList<Play> plays, Tuple<Integer,Integer> position) {
+		return null;
 	}
 	
 }

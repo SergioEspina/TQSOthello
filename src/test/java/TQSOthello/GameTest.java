@@ -45,5 +45,14 @@ public class GameTest {
 		assertTrue(testGame.isPositionInPlays(plays, position));
 		
 	}
+	
+	@Test
+	public void testGetPlayByPosition() {
+		testGame = new Game();
+		ArrayList<Play> plays = new ArrayList<Play>();
+		Tuple<Integer,Integer> position = new Tuple<Integer,Integer>(0,0);
+		boolean condition = testGame.getPlayByPosition(plays, position) == null;
+		assertTrue(condition);
+	}
 
 }
