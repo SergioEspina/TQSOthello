@@ -9,4 +9,7 @@ public class Tuple<X, Y> {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public int getX() { return (int) x;}
+	public int getY() { return (int) y;}
 }

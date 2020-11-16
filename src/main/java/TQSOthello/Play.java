@@ -12,4 +12,8 @@ public class Play {
 		ends = new ArrayList<Tuple<Integer, Integer>>();
 	}
 	
+	public Tuple<Integer, Integer> getOrigin(){
+		return origin;
+	}
+	
 }
