@@ -53,6 +53,12 @@ public class GameTest {
 		Tuple<Integer,Integer> position = new Tuple<Integer,Integer>(0,0);
 		boolean condition = testGame.getPlayByPosition(plays, position) == null;
 		assertTrue(condition);
+		
+		Play play = new Play(new Tuple<Integer, Integer>(0,0));
+		plays.add(play);
+		Play testPlay = testGame.getPlayByPosition(plays, position);
+		condition = testPlay.getOrigin().x == play.getOrigin().x && testPlay.getOrigin().y == play.getOrigin().y;
+		assertTrue(condition);
 	}
 
 }
