@@ -94,4 +94,8 @@ public class Board {
 		}
 		return plays;
 	}
+	
+	public void executePlay(Play play, int player) {
+		
+	}
 }
