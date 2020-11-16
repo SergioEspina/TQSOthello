@@ -33,6 +33,7 @@ public class GameTest {
 		
 	}
 	
+	//Condition coverage
 	@Test
 	public void testIsPositionInPlays() {
 		testGame = new Game();
@@ -44,8 +45,19 @@ public class GameTest {
 		plays.add(play);
 		assertTrue(testGame.isPositionInPlays(plays, position));
 		
+		plays = new ArrayList<Play>();
+		play = new Play(new Tuple<Integer, Integer>(0,1));
+		plays.add(play);
+		assertFalse(testGame.isPositionInPlays(plays, position));
+		
+		plays = new ArrayList<Play>();
+		play = new Play(new Tuple<Integer, Integer>(1,0));
+		plays.add(play);
+		assertFalse(testGame.isPositionInPlays(plays, position));
+		
 	}
 	
+	//Condition coverage
 	@Test
 	public void testGetPlayByPosition() {
 		testGame = new Game();
@@ -58,6 +70,20 @@ public class GameTest {
 		plays.add(play);
 		Play testPlay = testGame.getPlayByPosition(plays, position);
 		condition = testPlay.getOrigin().x == play.getOrigin().x && testPlay.getOrigin().y == play.getOrigin().y;
+		assertTrue(condition);
+		
+		plays = new ArrayList<Play>();
+		play = new Play(new Tuple<Integer, Integer>(1,0));
+		plays.add(play);
+		testPlay = testGame.getPlayByPosition(plays, position);
+		condition = testPlay == null;
+		assertTrue(condition);
+		
+		plays = new ArrayList<Play>();
+		play = new Play(new Tuple<Integer, Integer>(0,1));
+		plays.add(play);
+		testPlay = testGame.getPlayByPosition(plays, position);
+		condition = testPlay == null;
 		assertTrue(condition);
 	}
 

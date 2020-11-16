@@ -102,23 +102,27 @@ public class BoardTest {
 		exception.expect(RuntimeException.class);
 		testBoard.executePlay(null, -5);	
 	}
+	@Test
 	public void testExecutePlayPlayer0() {
 		testBoard = new Board();
 		testBoard.initBoard();
 		exception.expect(RuntimeException.class);
 		testBoard.executePlay(null, 0);	
 	}
+	@Test
 	public void testExecutePlayPlayer3() {
 		testBoard = new Board();
 		testBoard.initBoard();
 		exception.expect(RuntimeException.class);
 		testBoard.executePlay(null, 3);	
 	}
+	@Test
 	public void testExecutePlayPlayer5() {
 		testBoard = new Board();
 		testBoard.initBoard();
 		exception.expect(RuntimeException.class);
 		testBoard.executePlay(null, 5);	
 	}
-
+	
+	
 }
