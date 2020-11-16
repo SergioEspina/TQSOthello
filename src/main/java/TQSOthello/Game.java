@@ -7,20 +7,14 @@ public class Game {
 	private Board board;
 	private OutputView output;
 	
-	private boolean twoPlayers;
 	
-	public Game(boolean twoPlayers) {
+	public Game() {
 		
 		board = new Board();		
 		output = new OutputView();
 		
-		this.twoPlayers = twoPlayers;
 	}
-	
-	public boolean isTwoPlayers() {
-		return twoPlayers;
-	}
-	
+		
 	public int switchPlayer(int player) {
 		if (player == WHITE) {
 			return BLACK;
