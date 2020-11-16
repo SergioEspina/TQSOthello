@@ -22,6 +22,11 @@ public class Game {
 	}
 	
 	public int switchPlayer(int player) {
+		if (player == WHITE) {
+			return BLACK;
+		}else if (player == BLACK){
+			return WHITE;
+		}
 		return -1;
 	}
 	
