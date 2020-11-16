@@ -109,4 +109,13 @@ public class PlayTest {
 		
 	}
 
+	@Test
+	public void testGetNumberEnds() {
+		play = new Play(new Tuple<Integer, Integer>(5, 5));
+		assertEquals(0, play.getNumberEnds());
+		play.addEnd(new Tuple<Integer, Integer>(5,5));
+		assertEquals(1, play.getNumberEnds());
+		play.addEnd(new Tuple<Integer, Integer>(5,5));
+		assertEquals(2, play.getNumberEnds());
+	}
 }

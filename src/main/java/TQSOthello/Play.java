@@ -43,4 +43,7 @@ public class Play {
 		ends.add(end);
 	}
 	
+	public int getNumberEnds() {
+		return ends.size();
+	}
 }
