@@ -69,7 +69,29 @@ public class Board {
 		if(player < WHITE || player > BLACK) {
 			throw new RuntimeException();
 		}
-		
+		for(int i = 0; i < HEIGHT; i++) {
+			for(int j = 0; j < WIDTH; j++) {
+				if (board[i][j] == EMPTY) {					
+					Play play = new Play(new Tuple<Integer,Integer>(j,i));
+					boolean addPlay = false;
+					for( int dirX = -1; dirX <= 1; dirX++) {
+						for( int dirY = -1; dirY <= 1; dirY++) {
+							
+							Tuple<Integer, Integer> end = calculateEndPlay(new Tuple<Integer, Integer>(j, i), new Tuple<Integer, Integer>(dirX,dirY), 0, player);
+							if (end != null) {
+								play.addEnd(end);
+								addPlay = true;
+							}
+						}
+					}
+					
+					if(addPlay) {
+						plays.add(play);
+					}
+					
+				}
+			}
+		}
 		return plays;
 	}
 }
