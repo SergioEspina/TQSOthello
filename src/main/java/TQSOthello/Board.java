@@ -37,4 +37,11 @@ public class Board {
 		board[3][4] = BLACK;
 	}
 	
+	public Tuple<Integer,Integer> calculateEndPlay(Tuple<Integer,Integer> cell, Tuple<Integer,Integer> dir, int level,int player) {
+		Tuple<Integer,Integer> end = null;
+		if(player < WHITE || player > BLACK) {
+			throw new RuntimeException();
+		}
+		return end;
+	}
 }

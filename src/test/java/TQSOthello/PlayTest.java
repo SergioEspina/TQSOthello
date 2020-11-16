@@ -118,4 +118,5 @@ public class PlayTest {
 		play.addEnd(new Tuple<Integer, Integer>(5,5));
 		assertEquals(2, play.getNumberEnds());
 	}
+	
 }
