@@ -15,5 +15,15 @@ public class BoardTest {
 		assertEquals(8, testBoard.getHeight());
 		assertEquals(8, testBoard.getWidth());
 	}
+	
+	@Test
+	public void testInitBoard() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		assertEquals(1,testBoard.getCellValue(3, 3));
+		assertEquals(1,testBoard.getCellValue(4, 4));
+		assertEquals(1,testBoard.getCellValue(3, 4));
+		assertEquals(1,testBoard.getCellValue(4, 3));
+	}
 
 }

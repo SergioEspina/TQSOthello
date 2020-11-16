@@ -29,4 +29,9 @@ public class Board {
 		return board[y][x];
 	}
 	
+	//Inicializa tablero con la configuración inicial
+	public void initBoard() {
+		
+	}
+	
 }
