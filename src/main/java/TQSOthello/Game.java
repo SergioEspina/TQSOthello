@@ -71,7 +71,13 @@ public class Game {
 	}
 	
 	public Play getPlayByPosition(ArrayList<Play> plays, Tuple<Integer,Integer> position) {
-		return null;
+		Play play = null;
+		for(int i = 0; i < plays.size(); i++) {
+			if(plays.get(i).getOrigin().x == position.x && plays.get(i).getOrigin().y == position.y) {
+				play = plays.get(i);
+			}
+		}
+		return play;
 	}
 	
 }
