@@ -51,6 +51,8 @@ public class Board {
 		if ( newX >= 0 && newX < WIDTH) {
 			if (newY >= 0 && newY < HEIGHT) {
 				if (player == WHITE || player == BLACK) {
+					System.out.println(board[newY][newX] == player && level != 0);
+					System.out.println(board[newY][newX]);
 					if(board[newY][newX] == player && level != 0) {
 						end = new Tuple<Integer,Integer>(newX,newY);
 					}else if(board[newY][newX] != player && board[newY][newX] != EMPTY) {

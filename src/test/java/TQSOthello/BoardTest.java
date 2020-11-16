@@ -63,6 +63,24 @@ public class BoardTest {
 		testBoard.calculateEndPlay(null, null, 0, 5);
 	}
 	
+	//Decision coverage
+	@Test
+	public void testCalculateEndPlayDecision() {
+		testBoard = new Board();
+		testBoard.initBoard();
+		testBoard.calculateEndPlay(new Tuple<Integer,Integer>(0,0), new Tuple<Integer,Integer>(0,0), 0,1);
+		testBoard.calculateEndPlay(new Tuple<Integer,Integer>(-1,0), new Tuple<Integer,Integer>(0,0), 0,1);
+		testBoard.calculateEndPlay(new Tuple<Integer,Integer>(0,-1), new Tuple<Integer,Integer>(0,0), 0,1);
+		testBoard.calculateEndPlay(new Tuple<Integer,Integer>(-1,-1), new Tuple<Integer,Integer>(0,0), 0,1);
+		testBoard.calculateEndPlay(new Tuple<Integer,Integer>(10,10), new Tuple<Integer,Integer>(0,0), 0,1);
+		
+		MockBoard testBoard2 = new MockBoard();
+		
+		testBoard2.allWhite();		
+		testBoard2.calculateEndPlay(new Tuple<Integer,Integer>(5,5), new Tuple<Integer,Integer>(1,1), 1,1);
+		testBoard2.allBlack();		
+		testBoard2.calculateEndPlay(new Tuple<Integer,Integer>(5,5), new Tuple<Integer,Integer>(1,1), 0,1);
+	}
 	
 	//Player: Particiones equivalentes: -inf a 0, 1 a 2, 3 a +inf
 	//		  Valores frontera: 0,1,2,3

@@ -14,4 +14,20 @@ public class MockBoard extends Board{
 		}
 	}
 	
+	public void allWhite() {
+		for(int i = 0; i < HEIGHT; i++) {
+			for(int j = 0; j < WIDTH; j++) {
+				board[i][j] = 1;
+			}
+		}
+	}
+	
+	public void allBlack() {
+		for(int i = 0; i < HEIGHT; i++) {
+			for(int j = 0; j < WIDTH; j++) {
+				board[i][j] = 2;
+			}
+		}
+	}
+	
 }
