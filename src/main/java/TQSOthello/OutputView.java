@@ -12,6 +12,8 @@ public class OutputView {
 	private final String JUNCTION = "+";	
 	private final String H_OFFSET = "  ";
 	
+	private final int MAX_CHARACTERS = 30;
+	
 	public void printBoard(Board board, ArrayList<Play> plays) {
 		
 		String colBar = "";
@@ -105,5 +107,16 @@ public class OutputView {
 			System.out.print( BLACK_CHARACTER + "'s turn");
 		}
 		System.out.println(" (" + POSSIBLE_PLAY + " indicates a possible play)");
+	}
+	
+	public void printSeparator(int number) {
+		int max = number;
+		if (max > MAX_CHARACTERS) {
+			max = MAX_CHARACTERS;
+		}
+		for(int i = 0; i < max; i++) {
+			System.out.print(H_BAR);
+		}
+		System.out.println();
 	}
 }

@@ -36,6 +36,7 @@ public class Game {
 		ArrayList<Play> plays;
 		
 		do {
+			output.printSeparator(12);
 			output.printPlayerTurn(activePlayer);
 			plays = board.calculatePlays(activePlayer);
 			if(plays.size() == 0) {
@@ -48,7 +49,6 @@ public class Game {
 			}else {
 				output.printBoard(board, plays);
 				Tuple<Integer, Integer> position;
-				System.out.println("xD");
 				do {
 					position = input.askPosition();
 				}while(!isPositionInPlays(plays,position));
@@ -76,7 +76,6 @@ public class Game {
 	public boolean isPositionInPlays(ArrayList<Play> plays, Tuple<Integer,Integer> position) {
 		
 		for(int i = 0; i < plays.size(); i++) {
-			System.out.println(plays.get(i).getOrigin().x);
 			if(plays.get(i).getOrigin().x == position.x && plays.get(i).getOrigin().y == position.y) {
 				return true;
 			}

@@ -20,5 +20,21 @@ public class OutputViewTest {
 		
 		testOut.printBoard(b, plays);
 	}
+	//loop testing
+	@Test
+	public void testPrintSeparator() {
+		//No entra
+		testOut.printSeparator(0);
+		//Una vez
+		testOut.printSeparator(1);
+		//Dos veces
+		testOut.printSeparator(2);
+		//M veces donde m<n N=20
+		testOut.printSeparator(10);
+		//n-1 veces
+		testOut.printSeparator(19);
+		//n veces
+		testOut.printSeparator(20);
+	}
 
 }
