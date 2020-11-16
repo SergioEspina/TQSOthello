@@ -22,8 +22,8 @@ public class BoardTest {
 		testBoard.initBoard();
 		assertEquals(1,testBoard.getCellValue(3, 3));
 		assertEquals(1,testBoard.getCellValue(4, 4));
-		assertEquals(1,testBoard.getCellValue(3, 4));
-		assertEquals(1,testBoard.getCellValue(4, 3));
+		assertEquals(2,testBoard.getCellValue(3, 4));
+		assertEquals(2,testBoard.getCellValue(4, 3));
 	}
 
 }

@@ -31,7 +31,10 @@ public class Board {
 	
 	//Inicializa tablero con la configuración inicial
 	public void initBoard() {
-		
+		board[3][3] = WHITE;
+		board[4][4] = WHITE;
+		board[4][3] = BLACK;
+		board[3][4] = BLACK;
 	}
 	
 }
