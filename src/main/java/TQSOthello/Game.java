@@ -51,7 +51,7 @@ public class Game {
 				do {
 					position = input.askPosition();
 				}while(!isPositionInPlays(plays,position));
-				board.executePlay(getPlayByPosition(), activePlayer);
+				//board.executePlay(getPlayByPosition(), activePlayer);
 				skippedLastTurn = false;
 			}
 			
@@ -60,6 +60,13 @@ public class Game {
 	}
 	
 	public boolean isPositionInPlays(ArrayList<Play> plays, Tuple<Integer,Integer> position) {
+		
+		for(int i = 0; i < plays.size(); i++) {
+			if(plays.get(i).getOrigin().x == position.x && plays.get(i).getOrigin().y == position.y) {
+				return true;
+			}
+		}
+		
 		return false;
 	}
 	
