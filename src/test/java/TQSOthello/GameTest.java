@@ -27,12 +27,7 @@ public class GameTest {
 		assertEquals(-1, testGame.switchPlayer(3));
 		assertEquals(-1, testGame.switchPlayer(5));
 	}
-	
-	@Test
-	public void  testPlayGame() {
 		
-	}
-	
 	//Condition coverage
 	@Test
 	public void testIsPositionInPlays() {
@@ -85,6 +80,30 @@ public class GameTest {
 		testPlay = testGame.getPlayByPosition(plays, position);
 		condition = testPlay == null;
 		assertTrue(condition);
+	}
+	
+	//Decision coverage
+	@Test
+	public void testPlayGame() {
+		testGame = new Game();
+		MockBoard b = new MockBoard();
+		b.allBlack();
+		
+		testGame.setBoard(b);
+		testGame.playGame();
+		
+		/*MockInputController in = new MockInputController();
+		in.addInput(new Tuple<Integer, Integer>(3, 3));
+		in.addInput(new Tuple<Integer, Integer>(0, 0));
+		testGame = new Game();
+		b = new MockBoard();
+		b.allWhite();
+		b.setCell(0, 0, 0);
+		b.setCell(7, 7, 2);		
+		testGame.setBoard(b);
+		testGame.setInput(in);
+		testGame.playGame();*/
+		
 	}
 
 }

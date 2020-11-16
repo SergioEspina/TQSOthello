@@ -16,7 +16,8 @@ public class MockInputController extends InputController{
 		inputList.add(input);
 	}
 	
-	public Tuple<Integer,Integer> getNextInput(){
+	@Override
+	public Tuple<Integer,Integer> askPosition(){
 		if (index + 1 < inputList.size() ) {
 			index++;
 			return inputList.get(index-1);

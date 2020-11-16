@@ -30,4 +30,8 @@ public class MockBoard extends Board{
 		}
 	}
 	
+	public void setCell(int x,int y,int value) {
+		this.board[y][x] = value;
+	}
+	
 }
