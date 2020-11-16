@@ -42,6 +42,22 @@ public class Board {
 		if(player < WHITE || player > BLACK) {
 			throw new RuntimeException();
 		}
+		
+		int newX = cell.x + dir.x;
+		int newY = cell.y + dir.y;
+		
+		if ( newX >= 0 && newX < WIDTH) {
+			if (newY >= 0 && newY < HEIGHT) {
+				if (player == WHITE || player == BLACK) {
+					if(board[newY][newX] == player && level != 0) {
+						end = new Tuple<Integer,Integer>(newX,newY);
+					}else if(board[newY][newX] != player && board[newY][newX] != EMPTY) {
+						end = calculateEndPlay(new Tuple<Integer,Integer>(newX,newY), dir, level+1, player);
+					}
+				}
+			}
+		}
+		
 		return end;
 	}
 }
