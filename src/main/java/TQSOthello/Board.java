@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Board {
 	
-	private final int HEIGHT = 8;
-	private final int WIDTH = 8;
+	protected final int HEIGHT = 8;
+	protected final int WIDTH = 8;
 		
 	private final int EMPTY = 0;
 	private final int WHITE = 1;
 	private final int BLACK = 2;
 	
-	private int[][] board;
+	protected int[][] board;
 	
 	//Constructor clase Board
 	public Board() {			
