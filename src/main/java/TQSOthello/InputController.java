@@ -26,7 +26,7 @@ private Scanner s;
 				}
 			}else {
 				System.out.println("The number must be an integer");
-				s.hasNext();
+				s.next();
 			}
 		}while(true);
 		
@@ -42,7 +42,7 @@ private Scanner s;
 				}
 			}else {
 				System.out.println("The number must be an integer");
-				s.hasNext();
+				s.next();
 			}
 		}while(true);
 		
